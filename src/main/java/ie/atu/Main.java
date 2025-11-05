@@ -67,18 +67,16 @@ public class Main {
                         int quantity = scanner.nextInt();
                         scanner.nextLine();
                         p.setQuantity(quantity);
-                    } else {
-                        System.out.println("Product ID does not exist. Try again");
+                    } if(p.getProductID() != productID){
+                        System.out.println("Product not found. Try again\n");
                     }
                 }
 
             }
 
             if(userInput == 3) {
-                System.out.println("Product list: ");
-                for(Product p : products) {
-                    System.out.println(products);
-                }
+                System.out.println("Product list: \n");
+                System.out.println(products);
                 System.out.println("");
             }
 
